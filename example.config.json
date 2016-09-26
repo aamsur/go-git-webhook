@@ -1,0 +1,26 @@
+{
+    "logfile": "/var/log/webhook.log",
+    "host": "0.0.0.0",
+    "port": 9091,
+    "deploy": {
+        "before": "",
+        "after": ""
+    },
+    "repositories": [
+        {
+            "name": "Diaspora",
+            "url": "git@git.qasico.com:Projects/bbb.git",
+            "event": "push",
+            "commands": [
+                "example/pull_request.sh"
+            ],
+            "filters": [
+                {
+                    "branch": "develop",
+                    "ref": "refs/heads/develop",
+                    "path": "/home/alifamri/Workspaces/Developments/Playgrounds/bbb"
+                }
+            ]
+        }
+    ]
+}
